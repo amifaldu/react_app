@@ -6,7 +6,6 @@ import './App.css';
 import Welcome from './Welcome';
 import Clock from './Clock';
 import Toggle from './Toggle';
-import Greeting from './Greeting';
 
 class App extends Component {
   render() {
@@ -19,7 +18,6 @@ class App extends Component {
         <p className="App-intro">
           <Clock />
           <Welcome first_name ="image" />
-          //<Greeting isLoggedIn={false} />
           <Toggle />
           {element}
         </p>
