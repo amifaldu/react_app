@@ -19,7 +19,7 @@ class App extends Component {
         <p className="App-intro">
           <Clock />
           <Welcome first_name ="image" />
-          <Greeting isLoggedIn={false} />
+          //<Greeting isLoggedIn={false} />
           <Toggle />
           {element}
         </p>
