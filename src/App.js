@@ -1,42 +1,36 @@
 import React, { Component } from 'react';
-//import text and view
-//import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 import logo from './logo.svg';
 import './App.css';
-import Welcome from './Welcome';
-import Clock from './Clock';
 import Toggle from './Toggle';
-
+import Main from './Main';
+import Car from './Car';
+import Clock from './Clock';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to {Student(stu)}</h2>
+      <Router>
+        <div>
+          <Main />
+          <Route exact path="/" component={Clock}/>
+          <Route path="/details" component={Car}/>
+          <Route path="/about" component={Toggle}/>
         </div>
-        <p className="App-intro">
-          <Clock />
-          <Welcome first_name ="image" />
-          <Toggle />
-          {element}
-        </p>
-      </div>
+      </Router>
     );
   }
 }
-const stu = {
-  first_name: 'ami',
-  last_name: 'patel'
-};
-const user = {
-  avatarUrl: 'http://www.gettyimages.com.au/gi-resources/images/Embed/new/embed2.jpg',
-};
-const ele = < Welcome name = "Thinkbiz"/>;
-const element = <p>{Student(stu)} <img src={user.avatarUrl} />{ele}</p>;
-function Student(stu) {
-  return stu.first_name + ' '+stu.last_name;
-}
+// const stu = {
+//   first_name: 'ami',
+//   last_name: 'patel'
+// };
+// const user = {
+//   avatarUrl: 'http://www.gettyimages.com.au/gi-resources/images/Embed/new/embed2.jpg',
+// };
+// const element = <p>{Student(stu)} <img src={user.avatarUrl} /></p>;
+// function Student(stu) {
+//   return stu.first_name + ' '+stu.last_name;
+// }
 // function tick() {
 //
 //   );
